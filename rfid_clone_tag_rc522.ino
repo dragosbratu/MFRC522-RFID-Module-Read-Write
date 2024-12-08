@@ -1,3 +1,7 @@
+/*
+* Use it as you wish https://github.com/dragosbratu
+*/
+
 #include <SPI.h>
 #include <MFRC522.h>
 #include <string.h>
@@ -22,7 +26,8 @@ void setup() {
   Serial.println("2. Write (clone) a tag");
   
   // Default key for MIFARE Classic
-  for (byte i = 0; i < 6; i++) {
+  for (byte i = 0; i < 6; i++) 
+  {
     key.keyByte[i] = 0xFF;
   }
 }
@@ -48,7 +53,7 @@ String MoreHelp = F("RFID tags operate on specific frequencies. Common frequenci
                     "Solution:\n"
                     "Check the specifications of the second tag. If it operates at 125 kHz, you will need a different reader, such as the EM-18 RFID reader, which supports 125 kHz.\n");
 
-  Serial.println("\n=== Help Menu ===");
+  Serial.println("\n=== Help Menu https://github.com/dragosbratu ===");
   Serial.println("This program is designed for cloning RFID tags.");
   Serial.println("You can perform the following actions:");
   Serial.println("1. Read a tag to extract its UID and data (block 4).");
